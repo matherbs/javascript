@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_4</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+      <form>
+
+          <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
+          <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
+          <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
+
+          <button onclick="myFunction();return false;" name="valider" id="valider">Valider</button>
+      </form>
+
+          <h1 id="resultat"></h1>
+
+      <script>
+
+        function myFunction() {
+
+          var nom = document.getElementById("nom").value;
+          var prenom = document.getElementById("prenom").value;
+          var ville = document.getElementById("ville").value;
+
+          var resultat = "Bonjour "+prenom + " " + nom + ", qui vient de "+ville+" !";
+
+          document.getElementById("resultat").innerHTML = resultat;
+        };
+
+      </script>
+
+    </body>
+</html>

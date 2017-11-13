@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_7</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+
+            <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
+            <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
+
+            <button onclick="myFunction(); return false;" id="valider" name="valider">Valider</button>
+
+            <h1 id="resultat"></h1>
+
+        </form>
+
+        <script>
+
+          function myFunction() {
+
+            var x = document.getElementById("pointure").value;
+            var y = document.getElementById("annee").value;
+            var resultat = (((x*2)+5)*50)-y+1766;
+
+            document.getElementById("resultat").innerHTML = resultat;
+          }
+
+        </script>
+
+    </body>
+</html>

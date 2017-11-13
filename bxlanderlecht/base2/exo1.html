@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <form>
+      <label for="largeur">Largeur du rectangle :</label><input type="text" id="largeur" name="largeur"/><br/>
+      <label for="longeur">Longueur du rectangle :</label><input type="text" id="longueur" name="longueur"/><br/>
+
+      <button onclick="surfacerectangle();return false;" name="button">Surface Rectangle</button>
+      <button onclick="perirectangle();return false;" name="button">Périmètre Rectangle</button>
+    </form>
+
+    <h1 id="resultat"></h1>
+
+    <script>
+
+      function surfacerectangle() {
+
+        var largeur = document.getElementById("largeur").value;
+        var longueur = document.getElementById("longueur").value;
+
+        document.getElementById("resultat").innerHTML = "La surface du rectangle est de : " + largeur * longueur;
+      };
+
+      function perirectangle() {
+
+        var largeur = document.getElementById("largeur").value;
+        var longueur = document.getElementById("longueur").value;
+
+        document.getElementById("resultat").innerHTML = "Le périmètre du rectangle est de : " + ((2*largeur) + (2*longueur));
+      };
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_5</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+            <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+
+            <button  onclick="myFunction(); return false;" id="valider" name ="valider">Valider</button>
+
+            <h2 id="resultat"></h2>
+
+        </form>
+
+        <script type="text/javascript">
+
+          function myFunction(){
+              var nbr1 = document.getElementById("premier_nombre").value;
+              var nbr2 = document.getElementById("deuxieme_nombre").value;
+
+              document.getElementById("resultat").innerHTML = Math.floor(nbr1) * Math.floor(nbr2);
+          }
+        </script>
+    </body>
+</html>
